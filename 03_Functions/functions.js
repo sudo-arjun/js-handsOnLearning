@@ -15,48 +15,19 @@ https://www.freecodecamp.org/news/javascript-function-iife-parameters-code-block
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 */
 
-//eg.
+//function eg.
 function addTwoNumbers(number1 = 1, number2 = 2) {
 	console.log(`Value of num1:${number1}\nValue of num2:${number2}`);
 	console.log(number1 + number2);
 	return number1;
 }
-
+/*
 //Reference to function
 addTwoNumbers;
 //Calling or executing the function using ()
 //if argument is not send and parameter will be undefined
-// addTwoNumbers(5, 6);
-
-
-let letOut = 100;
-var varOut = 200;
-const constOut = 300;
-
-{{
-	let letInBlock = 1;
-	var varInBlock = 2;
-	const constInBlock = 3;
-
-	function funInBlock() {
-		// console.log("in braces block");
-		(function funInFunctionBlock() {
-			// console.log("Function in function block",constOut);
-		})();
-		let letInFunction = 10;
-		const varInFunction = 11;
-		const constInFunction = 12;
-
-	}
-}
-}
-funInBlock();
-//Generates error as function is not defined
-// funInFunctionBlock();
-
-// console.log(varInBlock);
-
-
+addTwoNumbers(5, 6);
+*/
 
 //having unknown no. of parameters - by using rest operator && IIFE concept
 /*
@@ -67,13 +38,27 @@ funInBlock();
 
 })(1,2,3);
 */
+
+
 //IIFE using fat arrow function
 // ((...allNum)=>{allNum.forEach( (element)=>console.log(element))})(1,2,3,4,5,6,7);
 
-//Function Expression
 
+//Function Expression
 //console.log(square(5));	--Won't work in function expression
 const square = function(num){
 	return num*num;
 }
 console.log(square(5));
+
+
+//fat arrow functions 
+
+let arr = [1,2,3,4,5];
+let squareUsingArrowImplicitReturn =  (element)=>element*element;
+let squareUsingArrowExplicitReturn = (element)=>{ return element*element};
+console.log("Arrow Function");
+for(let i=0 ;i<arr.length; i++)
+{
+	console.log(squareUsingArrowExplicitReturn(arr[i]));
+}
