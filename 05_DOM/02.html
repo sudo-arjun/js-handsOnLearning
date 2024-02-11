@@ -1,0 +1,49 @@
+<!-- movement in DOM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .background {
+                background-color: #212121;
+                color: white;
+        }
+    </style>
+</head>
+<body class="background">
+    <div>
+        <h2 id="h2id" class="heading">
+            This is my HTML document
+            <span style="display:none">this text is hidden</span>
+            <p>This is h6 in h2</p>
+        </h2>
+        <div class="week">
+            this is just some text
+            <!--This is comment-->
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Suiyoubi</div>
+            <div class="day">mokuyoubi</div>
+            <div class="day">kinyoubi</div>
+           </div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.week');
+    console.log(parent,parent.children);
+    console.log(parent.children[1].innerHTML);
+    parent.children[1].style.backgoundColor="orange";
+    const dayOne = parent.firstElementChild;
+    console.log(dayOne.parentElement);
+
+    //nodes
+    console.log("NODES: ",parent.childNodes);
+
+</script>
+</html>
+
+<!--
+
+
+-->

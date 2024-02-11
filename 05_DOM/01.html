@@ -1,0 +1,55 @@
+<!-- Selecting a element and some of its properties -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .background {
+                background-color: #212121;
+                color: white;
+        }
+    </style>
+</head>
+<body class="background">
+    <div>
+        <h2 id="h2id" class="heading">
+            This is my HTML document
+            <span style="display:none">this text is hidden</span>
+            <p>This is h6 in h2</p>
+        </h2>
+       
+    </div>
+</body>
+</html>
+
+
+<!-- 
+    Selecting a element:
+        //just use them on any parent node from where we can get to it, it can document or its parent
+        1. getElementById
+        2. getElementsByClass
+        3. querySelector
+        4. querySelectorAll
+    
+    some properties/methods that can be used on selected element
+        1. element.style
+            eg. element.style.backgroundColor = "green"
+        2. element.className
+            returns class name
+        3. element.id
+        4. element.innerHTML, .innerText, .textContent
+            can be used to set or get data from element
+        5. element.getAttribute("attribute_name")
+           element.setAttribute("attribute_name", "value")
+        
+    node list and html collection
+        node list is formed when querySelector is used
+        whereas html coll. is when using getElement..
+        html collection don't have forEach whereas node list has but both are array like not an array object.
+        To get benefits of array methods, we can convert them into array
+        ex.
+            Array.from(html_coll)
+
+
+ -->

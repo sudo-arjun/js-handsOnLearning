@@ -1,0 +1,49 @@
+<!-- Updating, Deleting element using DOM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background {
+                background-color: #212121;
+                color: white;
+        }
+    </style>
+</head>
+<body class="background">
+    <ul class="language">
+        <li class="list-item">Javascript</li>
+    </ul>
+</body>
+<script>
+   function addLang(langName){
+    //create list item node
+    const li = document.createElement("li");
+    // li.innerHTML = `${langName}`;
+    li.appendChild(document.createTextNode(`${langName}`));
+
+    //select ul from body
+    let ul = document.querySelector(".language");
+
+    //append it 
+    ul.appendChild(li);
+   }
+   addLang("python");
+
+//  Edit
+    //Select the element
+   let firstElement = document.querySelector("li:nth-child(1)");
+   let newElement = document.createElement("li");
+   newElement.textContent = "replaces text";
+   //or can use outerHTML, innerHTML, text node
+   //firstElement.outerHTML = "<li>replaces text</li>";
+
+   firstElement.replaceWith(newElement)
+    //create text node and attach to it (it will overwrite previous node)
+   
+   let secondElement = document.querySelector("li:nth-child(2)");
+   secondElement.remove();
+</script>
+</html>

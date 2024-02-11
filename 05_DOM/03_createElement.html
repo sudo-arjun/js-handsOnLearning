@@ -1,0 +1,39 @@
+<!-- Creating a element using js -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background {
+                background-color: #212121;
+                color: white;
+        }
+    </style>
+</head>
+<body class="background">
+    
+</body>
+<script>
+    const div = document.createElement("div");
+    console.log(div);
+    div.id = "divId";
+    div.className = "divClass";
+    div.setAttribute("title","Simple Div");
+    div.style.backgroundColor = "green";
+    div.style.padding = "5px";
+    div.style.borderRadius = "10px";
+    // div.innerText = "This div is created using Js";
+    /*
+        these .className or .innerText will first bring the value and then set the value
+        where as in setAttribute it just send and overwrites values without bringing.
+        So, it's better in efficiency
+    */
+    //alternative to innerText, textContent or innerHTML
+    const addText = document.createTextNode("This div is created using Js");
+    div.appendChild(addText);
+    console.log(div);
+    document.body.appendChild(div);
+</script>
+</html>
