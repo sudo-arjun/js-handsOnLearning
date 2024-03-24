@@ -1,0 +1,12 @@
+body > div{
+    width:50%;
+    margin: auto;
+    /* border:2px white solid; */
+    text-align:center;
+}
+div{
+    margin:3%;
+}
+#submit{
+    display:none; 
+}
