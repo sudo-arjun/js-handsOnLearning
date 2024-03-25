@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>xhr</title>
+        <style>
+            *{
+                margin:0px;
+            }
+            html{
+                background-color: #212121;
+                color:aliceblue;
+            }
+            button{
+                width:10vw;
+                height:10vh;
+            }
+            .flexbox{
+                height : 100vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .padding{
+                padding:5px;
+            }
+            .center{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flexbox">
+            <div>
+                <div class="center padding">
+                    <label for="inputTxt">Enter github username: </label>
+                </div>
+                <div class="center padding">
+                    <input type="text" id="inputTxt">
+                </div>
+                <div class="center padding" style="margin-top:10%">
+                    <button id="getBtn">Get Data</button>
+                </div>
+            </div>
+            <div class="center"" id="card">
+                <img>
+                <h3></h3>
+            </div>
+        </div>
+        <script src="01_xhr.js">
+
+        </script>
+    </body>
+</html>
