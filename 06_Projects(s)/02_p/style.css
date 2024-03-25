@@ -1,0 +1,29 @@
+body{
+    background-color: #212121;
+    color:white;
+}
+.center{
+    text-align:center;
+}
+.main{
+    width:70%;
+    margin:auto;
+    /* background-color: aqua; */
+}
+.textInput{
+    width:99%;
+    height:20vh;
+    background-color:#111111;
+    border-radius:10px;
+    padding:10px
+}
+.green{
+    color:green;
+
+}
+.red{
+    color: red;
+}
+/* div{
+    border:2px black solid;
+} */
